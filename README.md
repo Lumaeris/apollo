@@ -15,5 +15,5 @@ just generate-bootable-image # Generates a bootable image for you using bootc!
 Then you can run the `bootable.img` as your boot disk in your preferred hypervisor. GNOME Boxes is recommended and can be installed as a flatpak with minimal effort.
 
 ## Credits
-- [bootcrew](github.com/bootcrew/) for providing an arch-bootc based image.
+- [bootcrew](https://github.com/bootcrew/) for providing an arch-bootc based image.
 - Arch Linux for providing a package base for Apollo.
