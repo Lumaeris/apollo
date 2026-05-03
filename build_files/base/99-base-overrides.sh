@@ -9,7 +9,7 @@ echo "%wheel ALL=(ALL:ALL) ALL" > /etc/sudoers.d/10-wheel
 echo "Defaults pwfeedback" > /etc/sudoers.d/20-feedback
 
 # Set the default hostname
-echo "apollo" > /etc/hostname
+echo "apollo" | tee /etc/hostname
 
 # Enable Network Manager & systemd-resolved
 systemctl enable NetworkManager.service
