@@ -18,8 +18,7 @@ systemctl enable rechunker-group-fix.service
 # TODO: remove this as soon as the issue is fixed
 pacman -Rsn --noconfirm linux
 rm -rfv /usr/lib/modules
-curl -O https://archive.archlinux.org/packages/l/linux-zen/linux-zen-6.19.14.zen1-1-x86_64.pkg.tar.zst
-pacman -U --noconfirm linux-zen-6.19.14.zen1-1-x86_64.pkg.tar.zst
+pacman -U --noconfirm https://archive.archlinux.org/packages/l/linux-zen/linux-zen-6.19.14.zen1-1-x86_64.pkg.tar.zst
 
 echo "Install glibc-locales"
 pacman -Sy --noconfirm glibc-locales
