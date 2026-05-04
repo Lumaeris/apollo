@@ -1,3 +1,4 @@
 mask systemd-firstboot.service
 enable gdm.service
 enable gnome-initial-setup.service
+enable rechunker-group-fix.service
