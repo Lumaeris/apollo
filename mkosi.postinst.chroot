@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Enable wheel group for sudo
+echo "%wheel ALL=(ALL:ALL) ALL" > /etc/sudoers.d/10-wheel
+
+# Enable password feedback for sudo
+echo "Defaults pwfeedback" > /etc/sudoers.d/20-feedback
+
+# Set the default locale
+echo "Setting the default locale..."
+echo "LANG=en_US.UTF-8" >> /etc/locale.conf
+
+# Mask systemd-firstboot
+systemctl mask systemd-firstboot
+
+# Build the gschema overrides
+echo "Build the gschema overrides"
+glib-compile-schemas --strict /usr/share/glib-2.0/schemas
+
+echo "source /etc/profile.d/brew.sh" | tee -a /etc/bash.bashrc
