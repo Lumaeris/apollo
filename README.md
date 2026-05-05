@@ -10,11 +10,20 @@ Apollo is in an experimental pre-alpha state. Use with caution; stability is not
 WIP, ISOs are being worked on.
 
 ## Building
+Apollo is made with mkosi. You can build a bootc-compatible image with the following command:
+```bash
+just build-bootc
+```
 
-In order to get a Apollo .img you can run the following steps:
-```shell
-just build-containerfile # This will build the containerfile and all the dependencies you need
-just generate-bootable-image # Generates a bootable image for you using bootc!
+To load the built image into your container storage, you can run the following:
+```bash
+just load
+```
+
+To build a bootable image, follow the following commands:
+```bash
+sudo just load # the next command requires root access
+just generate-bootable-image
 ```
 
 Then you can run the `bootable.img` as your boot disk in your preferred hypervisor. GNOME Boxes is recommended and can be installed as a flatpak with minimal effort.
