@@ -103,7 +103,7 @@ jobs:
       - name: Build image with mkosi
         id: build 
         run: 
-          sudo mkosi -B -ff --debug --profile=bootc --cache-only=never
+          sudo mkosi -B -ff --debug --profile=bootc
 
       - name: Load the image into the local storage
         run:
