@@ -103,7 +103,7 @@ jobs:
       - name: Build image with mkosi
         id: build 
         run: 
-          mkdir mkosi.pkgcache/cache/pacman/pkg && sudo mkosi -B --profile bootc --debug -ff
+          mkdir --parents mkosi.pkgcache/cache/pacman/pkg && sudo mkosi -B --profile bootc --debug -ff
 
       - name: Load the image into the local storage
         run:
