@@ -98,7 +98,7 @@ jobs:
         uses: extractions/setup-just@v4
 
       - name: Install mkosi
-        uses: systemd/mkosi@26
+        uses: systemd/mkosi@v26
 
       - name: Build image with mkosi
         id: build 
