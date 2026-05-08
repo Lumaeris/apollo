@@ -108,7 +108,7 @@ jobs:
       - name: Load the image into the local storage
         run:
           for tag in DOCKER_METADATA_OUTPUT_TAGS;
-            BUILD_IMAGE_TAG=$tag just load
+            BUILD_IMAGE_TAG="$tag" just load
           done
 
       - name: Login to GitHub Container Registry
