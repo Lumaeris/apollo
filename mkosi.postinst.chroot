@@ -17,4 +17,9 @@ systemctl mask systemd-firstboot
 echo "Build the gschema overrides"
 glib-compile-schemas --strict /usr/share/glib-2.0/schemas
 
+# Fix rootless podman
+setcap -r /usr/bin/newuidmap
+setcap -r /usr/bin/newgidmap
+chmod u+s /usr/bin/newuidmap /usr/bin/newgidmap
+
 echo "source /etc/profile.d/brew.sh" | tee -a /etc/bash.bashrc
