@@ -9,6 +9,9 @@ Apollo is still experimental and should be considered to be in a **pre-alpha** s
 ## Installing
 WIP, ISOs are being worked on.
 
+## Contributing
+Please read our [CONTRIBUTING.md file](CONTRIBUTING.md) for information around contributing to Apollo
+
 ## Credits
 - [bootcrew](https://github.com/bootcrew/) for providing an arch-bootc based image.
 - Arch Linux for providing a package base for Apollo.
