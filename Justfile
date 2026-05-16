@@ -11,7 +11,7 @@ profiles := env("BUILD_PROFILES", "")
 default:
     @{{ just }} --list
 
-build: build-bootc
+alias build := build-bootc
 
 build-bootc $profiles=profiles:
     #!/bin/bash
