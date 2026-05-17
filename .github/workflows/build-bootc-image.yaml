@@ -178,7 +178,7 @@ jobs:
           # TODO: remove me when https://github.com/containers/podman/issues/27796 fixed
           for tag in $DOCKER_METADATA_OUTPUT_TAGS; do
             for _ in $(seq 2); do
-              sudo podman push --retry "${MAX_RETRIES}" --compression-format=zstd "${IMAGE_NAME}:${DEFAULT_TAG}" "${IMAGE_REGISTRY}/${IMAGE_NAME}:$tag"
+              sudo podman push --retry "${MAX_RETRIES}" --compression-format=zstd "localhost/${IMAGE_NAME}:${DEFAULT_TAG}" "${IMAGE_REGISTRY}/${IMAGE_NAME}:$tag"
             done
           done
 
