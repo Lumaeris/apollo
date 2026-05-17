@@ -143,18 +143,18 @@ jobs:
 
       - name: Load the image into the local storage
         run:
-          just load
+          sudo just load
         
       - name: Rechunk the final image
         if: ${{ inputs.rechunk == true }}
         run: |
-          just rechunk
+          sudo just rechunk
 
       - name: Tag images
         run: |
           just load
           for tag in $DOCKER_METADATA_OUTPUT_TAGS; do
-              podman tag apollo:latest $IMAGE_NAME:$tag;
+              sudo podman tag apollo:latest $IMAGE_NAME:$tag;
           done
 
       - name: Login to GitHub Container Registry
@@ -178,7 +178,7 @@ jobs:
           # TODO: remove me when https://github.com/containers/podman/issues/27796 fixed
           for tag in $DOCKER_METADATA_OUTPUT_TAGS; do
             for _ in $(seq 2); do
-              podman push --retry "${MAX_RETRIES}" --compression-format=zstd "localhost/${IMAGE_NAME}:${DEFAULT_TAG}" "${IMAGE_REGISTRY}/${IMAGE_NAME}:$tag"
+              sudo podman push --retry "${MAX_RETRIES}" --compression-format=zstd "localhost/${IMAGE_NAME}:${DEFAULT_TAG}" "${IMAGE_REGISTRY}/${IMAGE_NAME}:$tag"
             done
           done
 
