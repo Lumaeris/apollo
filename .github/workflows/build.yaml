@@ -26,7 +26,7 @@ jobs:
     with:
       image-name: "apollo"
       image-tag: "latest"
-      image-profiles: ""
+      profiles: ""
     secrets: inherit
 
   apollo-nvidia:
@@ -35,5 +35,5 @@ jobs:
     with:
       image-name: "apollo-nvidia"
       image-tag: "latest"
-      image-profiles: "nvidia"
+      profiles: "nvidia"
     secrets: inherit
