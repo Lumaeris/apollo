@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -uexo pipefail
+
 # Enable wheel group for sudo
 echo "%wheel ALL=(ALL:ALL) ALL" > /etc/sudoers.d/10-wheel
 

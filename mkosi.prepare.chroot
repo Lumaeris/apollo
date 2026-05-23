@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -ouex pipefail
+set -uexo pipefail
 
 # Install xdg-terminal-exec
 cd /tmp
